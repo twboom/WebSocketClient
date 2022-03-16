@@ -1,0 +1,48 @@
+html {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0;
+    height: 100vh;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 48px;
+}
+
+p#status {
+    margin: 0;
+}
+
+div#io {
+    display: flex;
+    height: 100%;
+}
+
+div.panel {
+    width: 50%;
+    height: 100%;
+    background-color: blue;
+    border: solid 1px black;
+}
+
+div#input-container {
+    background-color: yellow;
+    border: solid 1px black;
+    margin-bottom: 0;
+    position: sticky;
+    top: 48px;
+}
+
+input {
+    margin: 0;
+}
+
+p.message {
+    margin: 0
+}
