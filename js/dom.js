@@ -16,7 +16,23 @@ export function updateStatus(status, data) {
         
         case 'not_connected':
             container.innerHTML = 'Not connected';
+
+        case 'false_url':
+            container.innerHTML = 'URL is invalid';
     }
+}
+
+export function setPermalink(url) {
+    let { protocol, host } = new URL(document.location);
+    const current = `${protocol}//${host}`;
+    console.log(current)
+    url = current.toString() + '?url=' + url;
+    url = new URL(url);
+    console.log(url)
+    url = encodeURI(url);
+    const permalink = document.getElementById('permalink');
+    permalink.innerText = url;
+    permalink.href = url;
 }
 
 function createMessage(message, parentId) {
